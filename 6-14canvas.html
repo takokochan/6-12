@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript">
+window.onload = function(){
+    var c = document.getElementById('myCanvas');
+    if(c == null)  return false;
+
+    var context = c.getContext('2d');
+    context.fillRect(0,0,100,100);
+    context.strokeRect(120,0,100,100);
+
+    context.fillStyle = "red";
+    context.strokeStyle = "blue";
+    context.fillRect(0,120,100,100);
+    context.strokeRect(120,120,100,100);
+
+    context.fillStyle = "rgba(255,0,0,0.2)";
+    context.strokeStyle = "rgba(255,0,0,0.2)";
+    context.fillRect(240,0,100,100);
+    context.strokeRect(240,120,100,100);
+    context.clearRect(50,50,240,120);
+
+    context.beginPath();
+    context.arc(150,350,100,Math.PI *3/2,Math.PI * 2,false);
+    context.fillStyle = "rgba(0,255,0,0.25)";
+    context.closePath();
+    context.fill();
+
+
+    context.beginPath();
+    context.arc(100,450,50,0,Math.PI/2,false);
+    context.fillStyle = 'rgba(255,0,0,0.25)';
+    context.fill();
+    context.strokeStyle = 'rgba(255,0,0,0.25)';
+    // context.closePath();
+    context.stroke();
+
+    // context.beginPath();
+    context.arc(300,450,50,0,Math.PI/2,false);
+    context.fillStyle = 'rgba(255,0,0,0.25)';
+    context.fill();
+    context.strokeStyle = 'raba(255,0,0,0.25)';
+    // context.closePath();
+    context.stroke();
+
+  
+}
+</script>
+</head>
+
+<body>
+<canvas id="myCanvas" width="2000" height="2000"></canvas>
+</body>
+</html>
